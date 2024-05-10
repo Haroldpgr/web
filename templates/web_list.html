@@ -1,1 +1,7 @@
-hola como estas
+make_list
+<br>
+{%for post in posts%}
+<a href="{% url "web:detail" post.id %}">{{post.title}}</a>
+{% endfor %}
+<br>
+<a href="{% url "web:create" %}">Crear</a>
